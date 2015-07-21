@@ -8,7 +8,6 @@
 
     self.on('mount', function() {
       self.scrollableParent = self._findScrollableParent();
-      console.log('parent:', self.scrollableParent);
       self.scrollableParent.addEventListener('scroll', self._handleScroll);
       window.addEventListener('resize', self._handleScroll);
       self._handleScroll();
