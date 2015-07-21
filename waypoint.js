@@ -1,7 +1,4 @@
-<waypoint>
-  <span style="font-size: 0;"></span>
-
-  <script>
+riot.tag('waypoint', '<span style="font-size: 0;"></span>', function(opts) {
     var self = riot.observable(this),
       root = self.root,
       parent = self.parent;
@@ -14,29 +11,29 @@
     });
 
     self.on('update', function() {
-      // The element may have moved
+
       self._handleScroll();
     });
 
     self.on('unmount', function() {
       if (self.scrollableParent) {
-        // At the time of unmounting, the scrollable parent might no longer exist.
-        // Guarding against this prevents the following error:
-        //
-        //   Cannot read property 'removeEventListener' of undefined
+
+
+
+
         self.scrollableParent.removeEventListener('scroll', self._handleScroll);
         window.removeEventListener('resize', self._handleScroll);
       }
     });
 
-    _findScrollableParent() {
+    this._findScrollableParent = function() {
       var node = root;
 
       while (node.parentNode) {
         node = node.parentNode;
 
         if (node === document) {
-          // This particular node does not have a computed style.
+
           continue;
         }
 
@@ -49,16 +46,15 @@
         }
       }
 
-      // A scrollable parent element was not found, which means that we need to do
-      // stuff on window.
-      return window;
-    }
 
-    _handleScroll(e) {
+      return window;
+    }.bind(this);
+
+    this._handleScroll = function(e) {
       var isVisible = self._isVisible();
 
       if (self._wasVisible === isVisible) {
-        // No change since last trigger
+
         return;
       }
 
@@ -69,9 +65,9 @@
       }
 
       self._wasVisible = isVisible;
-    }
+    }.bind(this);
 
-    _distanceToTopOfScrollableParent(node) {
+    this._distanceToTopOfScrollableParent = function(node) {
       if (self.scrollableParent !== window && !node.offsetParent) {
         throw new Error(
           'The scrollable parent of Waypoint needs to have positioning to ' +
@@ -84,9 +80,9 @@
       } else {
         return node.offsetTop + self._distanceToTopOfScrollableParent(node.offsetParent);
       }
-    }
+    }.bind(this);
 
-    _isVisible() {
+    this._isVisible = function() {
       var waypointTop = self._distanceToTopOfScrollableParent(root),
         contextHeight,
         contextScrollTop;
@@ -105,6 +101,6 @@
       var isBelowTop    = contextScrollTop <= waypointTop + thresholdPx;
 
       return isAboveBottom && isBelowTop;
-    }
-  </script>
-</waypoint>
+    }.bind(this);
+  
+});

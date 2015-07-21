@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      html, body {
+        margin: 0; padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="height: 1200px; background-color: red;"></div>
+    <example-parent></example-parent>
+    <div style="height: 1200px; background-color: blue;"></div>
+  </body>
+  <script src="riot+compiler.js"></script>
+  <script src="example-parent.js"></script>
+  <script src="waypoint.js"></script>
+  <script>
+    riot.mount('*');
+  </script>
+</html>
