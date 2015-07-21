@@ -1,4 +1,4 @@
-<example-parent>
+<simple-example>
   <waypoint onenter={ waypointOnEnter } onleave={ waypointOnLeave } threshold={ 0 } />
 
   <script>
@@ -9,4 +9,4 @@
       console.info('WAYPOINT OUT');
     }
   </script>
-</example-parent>
+</simple-example>

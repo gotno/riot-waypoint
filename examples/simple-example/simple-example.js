@@ -1,4 +1,4 @@
-riot.tag('example-parent', '<waypoint onenter="{ waypointOnEnter }" onleave="{ waypointOnLeave }" threshold="{ 0 }"></waypoint>', function(opts) {
+riot.tag('simple-example', '<waypoint onenter="{ waypointOnEnter }" onleave="{ waypointOnLeave }" threshold="{ 0 }"></waypoint>', function(opts) {
     this.waypointOnEnter = function(e) {
       console.info('WAYPOINT IN');
     }.bind(this);
