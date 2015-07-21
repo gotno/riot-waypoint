@@ -8,18 +8,17 @@
 
     self.on('mount', function() {
       self.scrollableParent = self._findScrollableParent();
+
       self.scrollableParent.addEventListener('scroll', self._handleScroll);
       window.addEventListener('resize', self._handleScroll);
+
       self._handleScroll();
     });
 
     self.on('updated', function() {
-      // The element may have moved
-      try {
+      // prevent calling this until self.scrollableParent has been found
+      if (self.isMounted) {
         self._handleScroll();
-      }
-      catch (e) {
-        console.trace(e);
       }
     });
 
