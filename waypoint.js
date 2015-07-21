@@ -5,6 +5,7 @@ riot.tag('waypoint', '<span style="font-size: 0;"></span>', function(opts) {
 
     self.on('mount', function() {
       self.scrollableParent = self._findScrollableParent();
+      console.log('parent:', self.scrollableParent);
       self.scrollableParent.addEventListener('scroll', self._handleScroll);
       window.addEventListener('resize', self._handleScroll);
       self._handleScroll();
@@ -12,7 +13,12 @@ riot.tag('waypoint', '<span style="font-size: 0;"></span>', function(opts) {
 
     self.on('update', function() {
 
-      self._handleScroll();
+      try {
+        self._handleScroll();
+      }
+      catch (e) {
+        console.trace(e);
+      }
     });
 
     self.on('unmount', function() {
