@@ -10,7 +10,7 @@ riot.tag('waypoint', '<span style="font-size: 0;"></span>', function(opts) {
       self._handleScroll();
     });
 
-    self.on('update', function() {
+    self.on('updated', function() {
 
       try {
         self._handleScroll();
