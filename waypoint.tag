@@ -13,7 +13,7 @@
       self._handleScroll();
     });
 
-    self.on('update', function() {
+    self.on('updated', function() {
       // The element may have moved
       try {
         self._handleScroll();
