@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      html, body {
+        margin: 0; padding: 0;
+        position: relative;
+      }
+
+      #page-wrapper {
+        text-align: center;
+      }
+
+      #loading {
+        display: block;
+
+        position: fixed;
+        bottom: 0;
+        left: 0;
+
+        width: 100%;
+
+        font-size: 20px;
+        line-height: 28px;
+        text-align: center;
+
+        color: white;
+        background-color: magenta;
+      }
+    </style>
+  </head>
+  <body>
+    <infinite-scroll></infinite-scroll>
+  </body>
+  <script src="../../riot/riot.js"></script>
+  <script src="infinite-scroll.js"></script>
+  <script src="../../build/waypoint.js"></script>
+  <script>
+    riot.mount('infinite-scroll');
+  </script>
+</html>
