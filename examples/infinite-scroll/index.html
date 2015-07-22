@@ -29,13 +29,15 @@
       }
     </style>
   </head>
+
   <body>
     <infinite-scroll></infinite-scroll>
+
+    <script src="../../riot/riot.js"></script>
+    <script src="infinite-scroll.js"></script>
+    <script src="../../build/waypoint.js"></script>
+    <script>
+      riot.mount('infinite-scroll');
+    </script>
   </body>
-  <script src="../../riot/riot.js"></script>
-  <script src="infinite-scroll.js"></script>
-  <script src="../../build/waypoint.js"></script>
-  <script>
-    riot.mount('infinite-scroll');
-  </script>
 </html>
