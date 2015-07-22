@@ -10,7 +10,7 @@
   <waypoint
     onenter={ fetchImages }
     isdisabled={ waypointIsDisabled }
-    threshold={ 0 }
+    threshold={ 0.2 }
   />
 
   <script>
@@ -18,9 +18,7 @@
     self.isLoading = false;
     self.images = [];
 
-    var fetchCount = 0;
     fetchImages(e) {
-      console.log('fetch', ++fetchCount);
       self.isLoading = true;
       self.update();
 
