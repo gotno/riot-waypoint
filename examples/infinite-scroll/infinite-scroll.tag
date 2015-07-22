@@ -7,14 +7,20 @@
     <img each={ images } src={ this.src } />
   </div>
 
-  <waypoint onenter={ fetchImages } threshold={ 0 } />
+  <waypoint
+    onenter={ fetchImages }
+    isdisabled={ waypointIsDisabled }
+    threshold={ 0 }
+  />
 
   <script>
     var self = this;
     self.isLoading = false;
     self.images = [];
 
+    var fetchCount = 0;
     fetchImages(e) {
+      console.log('fetch', ++fetchCount);
       self.isLoading = true;
       self.update();
 
@@ -31,6 +37,10 @@
         self.isLoading = false;
         self.update();
       }, 1200);
+    }
+
+    waypointIsDisabled() {
+      return self.isLoading;
     }
   </script>
 </infinite-scroll>

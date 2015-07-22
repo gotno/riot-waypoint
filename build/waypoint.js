@@ -5,6 +5,7 @@ riot.tag('waypoint', '<span style="font-size: 0;"></span>', function(opts) {
 
     self.opts.onenter = function() { };
     self.opts.onleave = function() { };
+    self.opts.isdisabled = function() { return false };
     self.opts.threshold = 0;
 
     self.on('mount', function() {
@@ -19,10 +20,7 @@ riot.tag('waypoint', '<span style="font-size: 0;"></span>', function(opts) {
     self.on('updated', function() {
 
 
-
-
-
-      if (self.isMounted && !parent.isLoading) {
+      if (self.isMounted && !self.opts.isdisabled.call(self)) {
         self._handleScroll();
       }
     });
