@@ -23,9 +23,9 @@
 
     fetchImages(e) {
       self.isLoading = true;
+      self.update();
 
       // and then do ajax stuff or whatever
-      this.update();
       window.setTimeout(function() {
         self.images = self.images.concat(self.images.slice(0, 5));
         self.isLoading = false;

@@ -12,8 +12,8 @@ riot.tag('infinite-scroll', '<div id="loading" if="{ isLoading }"> <span>loading
 
     this.fetchImages = function(e) {
       self.isLoading = true;
+      self.update();
 
-      this.update();
       window.setTimeout(function() {
         self.images = self.images.concat(self.images.slice(0, 5));
         self.isLoading = false;
