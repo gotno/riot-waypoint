@@ -1,4 +1,4 @@
-riot.tag('infinite-scroll', '<div id="loading" if="{ isLoading }"> <span>loading...</span> </div> <div id="page-wrapper"> <img each="{ images }" riot-src="{ this.src }"> </div> <waypoint if="{ !isLoading }" onenter="{ fetchImages }" threshold="{ 0 }"></waypoint>', function(opts) {
+riot.tag('infinite-scroll', '<div id="loading" if="{ isLoading }"> <span>loading&hellip;</span> </div> <div id="page-wrapper"> <img each="{ images }" riot-src="{ this.src }"> </div> <waypoint if="{ !isLoading }" onenter="{ fetchImages }" threshold="{ 0 }"></waypoint>', function(opts) {
     var self = this;
     self.isLoading = false;
     self.images = [];

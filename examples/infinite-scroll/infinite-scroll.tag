@@ -1,6 +1,6 @@
 <infinite-scroll>
   <div id="loading" if={ isLoading }> 
-    <span>loading...</span>
+    <span>loading&hellip;</span>
   </div>
 
   <div id="page-wrapper">
