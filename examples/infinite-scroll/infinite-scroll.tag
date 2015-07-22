@@ -7,7 +7,7 @@
     <img each={ images } src={ this.src } />
   </div>
 
-  <waypoint if={ !isLoading } onenter={ fetchImages } threshold={ 0 } />
+  <waypoint onenter={ fetchImages } threshold={ 0 } />
 
   <script>
     var self = this;
