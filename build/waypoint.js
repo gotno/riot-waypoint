@@ -18,6 +18,10 @@ riot.tag('waypoint', '<span style="font-size: 0;"></span>', function(opts) {
 
     self.on('updated', function() {
 
+
+
+
+
       if (self.isMounted && !parent.isLoading) {
         self._handleScroll();
       }

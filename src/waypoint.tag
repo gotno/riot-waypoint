@@ -21,7 +21,11 @@
     });
 
     self.on('updated', function() {
-      // prevent calling this until self.scrollableParent has been found
+      // we check self.isMounted because the 'updated' event is
+      // called before the 'mount' event.
+      // we check parent.isLoading because riot continues to update child
+      // components even when they are not currently mounted to the page
+      // (in the case of an if conditional)
       if (self.isMounted && !parent.isLoading) {
         self._handleScroll();
       }
