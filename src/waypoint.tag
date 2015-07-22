@@ -6,6 +6,11 @@
       root = self.root,
       parent = self.parent;
 
+    // defaults
+    self.opts.onenter = function() { };
+    self.opts.onleave = function() { };
+    self.opts.threshold = 0;
+
     self.on('mount', function() {
       self.scrollableParent = self._findScrollableParent();
 
