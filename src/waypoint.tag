@@ -22,7 +22,7 @@
 
     self.on('updated', function() {
       // prevent calling this until self.scrollableParent has been found
-      if (self.isMounted) {
+      if (self.isMounted && !parent.isLoading) {
         self._handleScroll();
       }
     });
