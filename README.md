@@ -13,14 +13,24 @@ a port of [brigade's react-waypoint](https://github.com/brigade/react-waypoint) 
 
 waypoint can know four things, these are the defaults:
 
-```html
-<waypoint
-  onenter="{ function() { } }" <!-- waypoint is in or near the viewport -->
-  onleave="{ function() { } }" <!-- waypoint has left or is near leaving -->
-  isdisabled="{ function() { return false } }"  <!-- waypoint might take a nap -->
-  threshold="{ 0.0 }" <!-- waypoint will fire onenter/onleave when it's this -->
-                      <!-- percentage of a viewport height away from being visible -->
-/> 
+```javascript
+self.opts.onenter = function() { };
+self.opts.onleave = function() { };
+self.opts.isdisabled = function() { return false };
+self.opts.threshold = 0.0;
+```
+
+and this is what they mean:
+
+```
+onenter:    waypoint is in or near the viewport
+onleave:    waypoint has left the viewport
+isdisabled: waypoint might take a nap
+threshold:  waypoint will fire onenter/onleave when it's this percentage
+            of a viewport height away from being visible (1.0 = 100%)
+
+n.b. waypoint .call()'s the parent methods, passing itself as `this`, as well
+as the original event object in the case of onenter and onleave.
 ```
 
 include it at the bottom of a list (for lazy loading and such):
