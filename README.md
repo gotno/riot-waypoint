@@ -17,7 +17,7 @@ waypoint can know four things, these are the defaults:
 <waypoint
   onenter="{ function() { } }" <!-- waypoint is in or near the viewport -->
   onleave="{ function() { } }" <!-- waypoint has left or is near leaving -->
-  isdisabled="{ function() { return false } }"  <!-- waypoint takes a nap -->
+  isdisabled="{ function() { return false } }"  <!-- waypoint might take a nap -->
   threshold="{ 0.0 }" <!-- waypoint will fire onenter/onleave when it's this -->
                       <!-- percentage of a viewport height away from being visible -->
 /> 
