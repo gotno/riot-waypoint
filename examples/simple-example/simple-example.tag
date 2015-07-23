@@ -1,5 +1,7 @@
 <simple-example>
+  <div style="height: 1200px; background-color: red;"></div>
   <waypoint onenter={ waypointOnEnter } onleave={ waypointOnLeave } threshold={ 0 } />
+  <div style="height: 1200px; background-color: blue;"></div>
 
   <script>
     waypointOnEnter(e) {

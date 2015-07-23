@@ -1,4 +1,4 @@
-riot.tag('simple-example', '<waypoint onenter="{ waypointOnEnter }" onleave="{ waypointOnLeave }" threshold="{ 0 }"></waypoint>', function(opts) {
+riot.tag('simple-example', '<div style="height: 1200px; background-color: red;"></div> <waypoint onenter="{ waypointOnEnter }" onleave="{ waypointOnLeave }" threshold="{ 0 }"></waypoint> <div style="height: 1200px; background-color: blue;"></div>', function(opts) {
     this.waypointOnEnter = function(e) {
       console.info('WAYPOINT IN');
     }.bind(this);
