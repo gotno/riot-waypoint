@@ -16,7 +16,7 @@ waypoint can know four things, these are the defaults:
 ```javascript
 self.opts.onenter = function() { };
 self.opts.onleave = function() { };
-self.opts.isdisabled = function() { return false };
+self.opts.isdisabled = function() { return false; };
 self.opts.threshold = 0.0;
 ```
 
