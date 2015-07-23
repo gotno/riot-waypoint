@@ -6,7 +6,7 @@ riot.tag('waypoint', '<span style="font-size: 0;"></span>', function(opts) {
     self.opts.onenter = function() { };
     self.opts.onleave = function() { };
     self.opts.isdisabled = function() { return false };
-    self.opts.threshold = 0;
+    self.opts.threshold = 0.0;
 
     self.on('mount', function() {
       self.scrollableParent = self._findScrollableParent();
