@@ -15,11 +15,11 @@ waypoint can know four things, these are the defaults:
 
 ```html
 <waypoint
-  onenter={ function() { } } <!-- waypoint is in or near the viewport -->
-  onleave={ function() { } } <!-- waypoint has left or is near leaving -->
-  isdisabled={ function() { return false } }  <!-- waypoint takes a nap -->
-  threshold={ 0.0 } <!-- waypoint will fire onenter/onleave when it's this
-                         percentage of a viewport height away from being visible -->
+  onenter="{ function() { } }" <!-- waypoint is in or near the viewport -->
+  onleave="{ function() { } }" <!-- waypoint has left or is near leaving -->
+  isdisabled="{ function() { return false } }"  <!-- waypoint takes a nap -->
+  threshold="{ 0.0 }" <!-- waypoint will fire onenter/onleave when it's this -->
+                      <!-- percentage of a viewport height away from being visible -->
 /> 
 ```
 
@@ -32,8 +32,8 @@ include it at the bottom of a list (for lazy loading and such):
     onenter="{ waypointOnEnter }"
     onleave="{ waypointOnLeave }"
     isdisabled="{ waypointIsDisabled }"
-    threshold="{ 0.5 }" <!-- waypoint will fire onenter when it's half a
-                           viewport height away from being visible -->
+    threshold="{ 0.5 }" <!-- waypoint will fire onenter when it's half a -->
+                        <!-- viewport height away from being visible -->
   /> 
 
   <script>
