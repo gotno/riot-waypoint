@@ -32,8 +32,7 @@ include it at the bottom of a list (for lazy loading and such):
     onenter="{ waypointOnEnter }"
     onleave="{ waypointOnLeave }"
     isdisabled="{ waypointIsDisabled }"
-    threshold="{ 0.5 }" <!-- waypoint will fire onenter when it's half a -->
-                        <!-- viewport height away from being visible -->
+    threshold="{ 0.5 }"
   /> 
 
   <script>
@@ -45,7 +44,7 @@ include it at the bottom of a list (for lazy loading and such):
       self.isLoading = true;
       // ajaxStuff
       //   .success(data)
-      //     self.items.concat(responseJSON);
+      //     self.items.concat(data.responseJSON);
       //   .always
       //     self.isLoading = false;
     }
