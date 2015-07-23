@@ -13,7 +13,7 @@ a port of [brigade's react-waypoint](https://github.com/brigade/react-waypoint) 
 
 waypoint can know four things, these are the defaults:
 
-```
+```html
 <waypoint
   onenter="{ function() { } }" <!-- waypoint is in or near the viewport -->
   onleave="{ function() { } }" <!-- waypoint has left or is near leaving -->
@@ -25,7 +25,7 @@ waypoint can know four things, these are the defaults:
 
 include it at the bottom of a list (for lazy loading and such):
 
-```
+```html
 <items>
   <item each={ items } data={ this } />
   <waypoint
