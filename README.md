@@ -74,11 +74,10 @@ check out the examples directory for more.
 
 ## thanks!
 
-thanks to [trotzig](https://github.com/trotzig) and [lencioni](https://github.com/lencioni) for writing
-the original component, and the [Brigade team](https://github.com/brigade/) for open sourcing it.
+thanks to [trotzig](https://github.com/trotzig) and [lencioni](https://github.com/lencioni) for writing the original component,
+and the [Brigade team](https://github.com/brigade/) for open sourcing it.
 
-thanks also to [flarnie](https://github.com/flarnie) for writing the excellent
-article on that got me excited about this in the first place:
+thanks also to [flarnie](https://github.com/flarnie) for writing the article that got me excited about this in the first place:
 [To Infinity and Beyond with React Waypoint](https://medium.com/brigade-engineering/to-infinity-and-beyond-with-react-waypoint-cb5ba46a9150)
 
 ## license
