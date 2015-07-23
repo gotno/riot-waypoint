@@ -6,7 +6,7 @@ a port of [brigade's react-waypoint](https://github.com/brigade/react-waypoint) 
 -  waypoint is a happy little creature who can sit on a page.
 -  waypoint takes up no space but it knows where it is.
 -  waypoint can tell you when it's in the viewport, and when it leaves.
--  wayport can look for the viewport and tell you when it's close.
+-  waypoint can look for the viewport and tell you when it's close.
 -  waypoint is patient and happy to wait while you do things.
 
 ## usage
@@ -60,7 +60,7 @@ include it at the bottom of a list (for lazy loading and such):
     }
 
     waypointOnEnter() {
-      self.fetch();
+      self.fetchNextItems();
     }
 
     waypointIsDisabled() {
