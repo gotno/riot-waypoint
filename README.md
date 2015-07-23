@@ -57,6 +57,7 @@ include it at the bottom of a list (for lazy loading and such):
       //     self.items.concat(data.responseJSON);
       //   .always
       //     self.isLoading = false;
+      //     self.update();
     }
 
     waypointOnEnter() {
