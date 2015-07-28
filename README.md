@@ -31,6 +31,7 @@ threshold:  waypoint will fire onenter/onleave when it's this percentage
 ```
 
 please note:
+
 1. waypoint `.call()`'s the parent methods, passing itself as `this`, as well as the `event` object in the case of `onenter` and `onleave`.
 2. `isdisabled` is necessary at this point because of a bug that lets riot continue to update child components even when they are being conditionally rendered. see https://github.com/riot/riot/issues/1020
 
