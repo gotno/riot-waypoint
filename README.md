@@ -37,7 +37,7 @@ please note:
 
 ## example
 
-include it at the bottom of a list (for lazy loading and such):
+here's a simple lazy loader. for more, see the [examples](./examples) directory.
 
 ```html
 <items>
@@ -73,8 +73,6 @@ include it at the bottom of a list (for lazy loading and such):
   </script>
 </items> 
 ```
-
-check out the [examples](./examples) directory for more.
 
 ## thanks!
 
