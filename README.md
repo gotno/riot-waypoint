@@ -7,7 +7,7 @@ a port of [brigade's react-waypoint](https://github.com/brigade/react-waypoint) 
 -  waypoint takes up no space but it knows where it is.
 -  waypoint can tell you when it's in the viewport, and when it leaves.
 -  waypoint can look for the viewport and tell you when it's close.
--  waypoint is patient and happy to wait while you do things.
+-  waypoint is patient and happy to wait while you take care of the details.
 
 ## usage
 
