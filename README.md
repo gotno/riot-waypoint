@@ -49,9 +49,9 @@ here's a simple lazy loader. for more, see the [examples](./examples) directory.
   /> 
 
   <script>
-    var self = this,
-      items = [],
-      isLoading = false;
+    var self = this;
+    self.items = [];
+    self.isLoading = false;
 
     fetchNextItems() {
       self.isLoading = true;
