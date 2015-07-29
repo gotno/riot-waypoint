@@ -24,7 +24,7 @@ and this is what they mean:
 
 ```
 onenter:    waypoint is in or near the viewport
-onleave:    waypoint has left the viewport
+onleave:    waypoint has left or is some distance away from the viewport
 isdisabled: waypoint might take a nap
 threshold:  waypoint will fire onenter/onleave when it's this percentage
             of a viewport height away from being visible (1.0 = 100%)
