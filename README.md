@@ -56,7 +56,7 @@ include it at the bottom of a list (for lazy loading and such):
     fetchNextItems() {
       self.isLoading = true;
       // ajaxStuff
-      //   .success(data)
+      //   .done(data)
       //     self.items.concat(data);
       //   .always
       //     self.isLoading = false;
