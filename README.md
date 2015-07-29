@@ -44,21 +44,20 @@ include it at the bottom of a list (for lazy loading and such):
   <item each={ items } data={ this } />
   <waypoint
     onenter="{ waypointOnEnter }"
-    onleave="{ waypointOnLeave }"
     isdisabled="{ waypointIsDisabled }"
     threshold="{ 0.5 }"
   /> 
 
   <script>
-    var self = this;
-    var items = [...];
-    var isLoading = false;
+    var self = this,
+      items = [],
+      isLoading = false;
 
     fetchNextItems() {
       self.isLoading = true;
       // ajaxStuff
       //   .success(data)
-      //     self.items.concat(data.responseJSON);
+      //     self.items.concat(data);
       //   .always
       //     self.isLoading = false;
       //     self.update();
