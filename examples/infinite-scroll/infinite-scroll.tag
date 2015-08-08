@@ -5,11 +5,6 @@
 
   <img each={ images } src={ this.src } />
 
-  <!-- for some reason, in Chrome, waypoint thinks it's above the list -->
-  <!-- of items unless the list is wrapped in a div or there is any    -->
-  <!-- element between waypoint and the list of items.                 -->
-  <div></div>
-
   <waypoint
     onenter={ fetchImages }
     isdisabled={ waypointIsDisabled }

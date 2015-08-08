@@ -41,12 +41,7 @@ here's a simple lazy loader. for more, see the [examples](./examples) directory.
 
 ```html
 <items>
-  <div class="list-wrapper">
-    <item each={ items } data={ this } />
-  </div>
-  <!-- items looped with each must be wrapped in a container,        -->
-  <!-- otherwise waypoint is always rendered at the top of the page. -->
-  <!-- i'm trying to figure out why.                                 -->
+  <item each={ items } data={ this } />
 
   <waypoint
     onenter="{ waypointOnEnter }"
