@@ -1,6 +1,10 @@
 # riot-waypoint
 
-a port of [brigade's react-waypoint](https://github.com/brigade/react-waypoint) to [riot](https://muut.com/riotjs/)
+a riot component upon which to register callbacks which will be triggered when the component is scrolled to. works in all containers that can scroll, including `window`.
+
+riot-waypoint can be used to build features like lazy loading, infinite scroll, etc.
+
+this is a port of [brigade's react-waypoint](https://github.com/brigade/react-waypoint) to [riot](https://muut.com/riotjs/)
 
 ## what it is
 -  waypoint is a happy little creature who can sit on a page.
